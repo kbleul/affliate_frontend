@@ -30,16 +30,6 @@
 
 <script>
 
-// function loadDoc() {
-//   var xhttp = new XMLHttpRequest();
-//   xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//      document.getElementById("demo").innerHTML = this.responseText;
-//     }
-//   };
-//   xhttp.open("GET", "https://affliate.cyclic.app/addme", true);
-//   xhttp.send();
-// }
 
 const saveEmail = async (email) => {
 
@@ -51,14 +41,8 @@ const saveEmail = async (email) => {
     body: JSON.stringify({email}) 
   });
 
-  const result = await response.json()
-console.log(result)
- 
     location.href = "https://tinyurl.com/k8je2bft";
-
 }
-
-
 
 
 function validateEmail(email) {
@@ -79,9 +63,7 @@ function validate() {
     return false;
 }
 
-
-
-    document.getElementById("forward").addEventListener("click", validate )
+ document.getElementById("forward").addEventListener("click", validate )
 
 </script>
 </html>
