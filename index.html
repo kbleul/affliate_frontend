@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>Welcome</title>
+</head>
+<body>
+    
+    <article id="main_article">
+        <div id="secondary_container">
+            <h1>There’s a quick, at-home way to rebalance all 5 of your hormones. It takes just 30 seconds a day. And you could see the stubborn rolls start melting off before your eyes! <br>
+            </h1>
+            <h4 id="here">Here’s how:</h4> 
+            <p>Get Your Free Ebook Copy Today</p>
+            <input id="email" type="email" required placeholder="Your Email Address"/>
+            <p id="warning">Please Enter a Valid Email Address</p>
+            <button id="forward">Find Out More</button>
+        </div>
+
+    </article>
+</body>
+
+<script>
+
+const saveEmail = async () => {
+    await axios({
+        method: 'post',
+        url: 'https://affliate.cyclic.app/addme',
+        data: { 
+            name : "email",
+            data: JSON.stringify( $("#email").val() )  }
+        }).then(function (response) {
+             console.log( response.data )
+    })
+}
+
+
+function validateEmail(email) {
+        let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return res.test(email);
+}
+
+
+function validate() {
+    let email = $("#email").val();
+
+    if(validateEmail(email)) {
+          $("#warning").hide() 
+          saveEmail()
+    } 
+    else {  $("#warning").show()   }
+
+    return false;
+}
+
+
+
+    document.getElementById("forward").addEventListener("click", validate )
+
+</script>
+</html>
