@@ -42,28 +42,15 @@
 // }
 
 const saveEmail = async () => {
-    // await axios({
-    //     method: 'POST',
-    //     headers: { 'content-type': 'text/json' },
-    //     url: 'https://affliate.cyclic.app/addme',
-    //     data: { 
-    //         name : "email",
-    //         data: JSON.stringify( $("#email").val() )  }
-    //     }).then(function (response) {
-    //          console.log( response.data )
-    // })
 
-    await axios.post("https://affliate.cyclic.app/addme", { email : "kkk"})
-
-//     const response = await fetch("https://affliate.cyclic.app/addme", {
-//     method: 'POST', // *GET, POST, PUT, DELETE, etc.
-//     // // mode: 'cors', // no-cors, *cors, same-origin
-//     headers: {  'Content-Type': 'application/json'  },
-//     body: JSON.stringify("data") // body data type must match "Content-Type" header
-//   });
-//   console.log( response.json()) // parses JSON response into native JavaScript objects
-// }
+    const response = await fetch("https://affliate.cyclic.app/addme", {
+    method: 'POST', 
+    headers: {  'Content-Type': 'application/json'  },
+    body: JSON.stringify("data") 
+  });
+  console.log(await response.json()) 
 }
+
 
 
 
