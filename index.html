@@ -42,13 +42,19 @@
 // }
 
 const saveEmail = async () => {
+    const email = $("#email").val()
+
+    $("#email").val("")
 
     const response = await fetch("https://affliate.cyclic.app/addme", {
     method: 'POST', 
     headers: {  'Content-Type': 'application/json'  },
-    body: JSON.stringify("data") 
+    body: JSON.stringify({email : email }) 
   });
-  console.log(await response.json()) 
+
+ if(await response.json())  {
+    location.assign("https://www.digistore24.com/redir/330639/kbleul/");
+ }
 }
 
 
