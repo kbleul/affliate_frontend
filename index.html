@@ -18,9 +18,11 @@
             </h1>
             <h4 id="here">Here’s how:</h4> 
             <p>Get Your Free Ebook Copy Today</p>
-            <input id="email" type="email" required placeholder="Your Email Address"/>
-            <p id="warning">Please Enter a Valid Email Address</p>
-            <button id="forward">Find Out More</button>
+            <!-- <form action="https://affliate.cyclic.app/addme" method="POST"> -->
+                <input id="email" type="email" required placeholder="Your Email Address"/>
+                <p id="warning">Please Enter a Valid Email Address</p>
+                <input type="submit" id="forward" value="Find Out More" />
+          
         </div>
 
     </article>
@@ -28,9 +30,21 @@
 
 <script>
 
+// function loadDoc() {
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//      document.getElementById("demo").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "https://affliate.cyclic.app/addme", true);
+//   xhttp.send();
+// }
+
 const saveEmail = async () => {
     await axios({
-        method: 'post',
+        method: 'POST',
+        headers: { 'content-type': 'text/json' },
         url: 'https://affliate.cyclic.app/addme',
         data: { 
             name : "email",
