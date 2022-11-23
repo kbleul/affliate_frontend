@@ -34,7 +34,11 @@
             <h1>Get your free delicious keto breakfast recipes know. <br> </h1>
      <p id="discri">  I will also send you more recipes for breakfast, lunch, dinner, desserts and snacks weekly, all for free.</p>
                 <input id="email" type="email" required placeholder="Your Email Address"/>
+
                 <p id="warning">Please Enter a Valid Email Address</p>
+                <img src="imgs/loading2.gif" id="loading_img" />
+
+                
                 <input type="submit" id="forward" value="Sign Me Up" />
           
         </div>
@@ -48,6 +52,7 @@
 const saveEmail = async (email) => {
 
     $("#email").val("")
+    $("#loading_img").show()
 
     const response = await fetch("https://affliate.cyclic.app/addme", {
     method: 'POST', 
