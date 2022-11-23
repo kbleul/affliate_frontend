@@ -9,19 +9,37 @@
     background-image: url("./imgs/cook.jpg");
     position: absolute;
     top: 0;
+    display: flex;
+    overflow-y: scroll;
 }
 
+#menu_container {
+    width: 40%;
+    margin-top: 4%;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+#menu_container h2 {   margin-bottom: 2rem;  }
+
+#menu_container p {   padding: 0.8rem;   }
+
 #secondary_container {
-    width: 50%;
+    width: 58%;
     background: rgba(0, 79, 79, 0.2);
-    margin-left: 25%;
     margin-top: 8%;
     color: white;
     padding: 2rem;
+    height: 70vh;
+    margin-right: 1%;
 }
 
 #secondary_container h1{
     padding: 2rem 3rem;
+    width: 95%;
+    margin-left: 2.5%;
+    text-align: center;
 }
 
 #secondary_container p,
@@ -61,4 +79,37 @@
     text-align: right;
     font-weight: bold;
     display: none;
+}
+
+@media screen and (max-width: 750px) {
+    #main_article { flex-direction: column; }
+
+    #secondary_container {
+        width: 90%;
+        height: 80vh;
+        margin-right: 0%;
+        order: 1;
+        margin-left: 5%;
+        padding: 2rem 0;
+    }
+
+    #secondary_container { 
+        padding: 2rem 0rem;
+        width: 95%;
+        margin-left: 2.5%;
+     }
+
+     #discri {  
+        width: 100%;
+        margin-left: 0;
+        padding-left: .9rem;
+        padding-right: .9rem;
+    }
+
+    #menu_container {
+        width: 100%;
+        margin-top: 15%;
+        order: 2;
+    }
+  
 }
