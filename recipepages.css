@@ -1,0 +1,209 @@
+*,::after,::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    z-index: 10;
+}
+
+header #logo_container { 
+    width: 40%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+header #logo_container #logo { 
+    height: 4rem;
+    filter: brightness(110%);
+}
+
+
+article#hero_container {
+    height: 88vh;
+    display: flex;
+    margin-top: 5rem;
+}
+
+article#hero_container #hero_img_sec {
+    height: 99%;
+    width: 44%;
+    margin-left: 1%;
+}
+
+article#hero_container #hero_img_sec img {
+    width: 100%;
+    height: 100%;
+}
+
+article#hero_container #hero_title_sec {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article#hero_container #hero_title_sec #hero_title_subsec {
+    text-align: center;
+}
+
+article#hero_container #hero_title_sec #hero_title_subsec h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #535353;
+    font-family:'Times New Roman', Times, serif;
+    width: 90%;
+    margin-left: 5%;
+}
+
+article#hero_container #hero_title_sec #bywho_container {
+    font-size: .9rem;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+article#hero_container #hero_title_sec #bywho_container img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100rem;
+}
+
+/*-------------------------*/
+
+main {
+    display: flex;
+    margin-top: 18vh;
+}
+
+main #main_content_wrapper {
+    width: 60%;
+    margin-left: 17%;
+}
+
+main #ads_wrapper {
+    width: 23%;
+}
+
+main #first_sec p,
+main #second_sec p,
+main #third_sec p {
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+main #first_sec h3 {
+    font-family: Times, "Times New Roman", Georgia, serif;
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    text-transform: capitalize;
+}
+
+main #second_sec {
+    margin-top: 13vh;
+}
+
+main #second_sec h3 {
+    font-size : 1.8rem;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+main #third_sec { 
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+main #third_sec h5 { 
+    font-size : 1.2rem;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    padding: 1.5rem 0;
+    text-transform: capitalize;
+}
+
+main #third_sec img {
+    margin: 6vh 0 10vh 0;
+    width: 80%;
+    margin-left: 10%;
+}
+
+main #third_sec .nutritional_value {
+    color: #757575;
+}
+
+main #third_sec .ingredients_sec {
+    width: 50%;
+    margin-left: 25%;
+    background-color: #f4f4f4;
+    text-align: center;
+    line-height: 3rem;
+    padding: 2rem 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+main #third_sec .ingredients_sec ul {
+   list-style: none;
+   font-family: "Lucida Console", Courier, monospace;
+}
+
+main .recipes_sec {
+    line-height: 3rem;
+    padding: 2rem 0;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+main .recipes_sec .recipe_title {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+main #summery_sec {
+    padding-bottom: .1rem;
+    border-left: 4px solid red;
+    padding-left: 2rem;
+}
+
+
+/*----------------------------------*/
+
+footer { margin-top: 25vh; }
+
+footer #emailbox_container {
+    margin-left: 10%;
+    width: 40%;
+    line-height: 1.8rem;
+    background-color: beige;
+    padding: 1rem 0;
+}
+
+footer #emailbox_container h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10vh 0;
+}
+
+footer #emailbox_container #email {
+    width: 79%;
+    margin-left: 10%;
+    margin-top: 8vh;
+    padding: 1rem .5rem;
+    margin-bottom: 5vh;
+    font-size: 1rem;
+    border-radius: 11px;
+}
+
