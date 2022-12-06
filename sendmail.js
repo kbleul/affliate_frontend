@@ -1,4 +1,5 @@
 
+
 const saveEmail = async (email) => {
 
     $("#email").val("")
@@ -10,6 +11,7 @@ const saveEmail = async (email) => {
     body: JSON.stringify({email}) 
   });
 
+  $("#loading_img").hide()
   $("#warning").text("Thank You").fadeIn()
 
     setTimeout(3000, $("#warning").fadeOut() )
@@ -29,7 +31,7 @@ function validate() {
         $("#warning").hide() 
         saveEmail(email)
     } 
-    else {  $("#warning").show()   }
+    else {  $("#warning").text("Please Enter a Valid Email Address").show()   }
 
     return false;
 }

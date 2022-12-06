@@ -234,21 +234,28 @@ footer #footer_ads_container #all_for {
 .adbox #all_for .amount,
 footer #footer_ads_container .amount { color: red; }
 
-.adbox button,
-footer #footer_ads_container button{
-    width: 40%;
-    padding: .5rem 0;
+.adbox a,
+footer #footer_ads_container a{
+    padding: .5rem 1rem;
     background-color: coral;
     border-radius: 5rem;
     border: none;
     font-weight: bold;
-    margin-left: 30%;
+    width: 50%;
+    margin-left: 25%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.adbox button:hover,
-.adbox button:focus,
-footer #footer_ads_container button:hover,
-footer #footer_ads_container button:focus { background-color: #ff6026;  }
+.adbox a:hover,
+.adbox a:focus,
+footer #footer_ads_container a:hover,
+footer #footer_ads_container a:focus {  
+    background-color: #ff6026; 
+    text-decoration: none;
+ }
 
 
 #ads_wrapper a {
@@ -278,7 +285,7 @@ footer #footer_ads_container {
     line-height: 1.8rem;
     background-color: #f5f5dc;
     padding: 1rem 0;
-    height: 65vh;
+    height: 75vh;
 }
 
 footer #footer_ads_container {
@@ -318,6 +325,11 @@ footer #footer_ads_container button{
 }
 
 .footer_ads_container-mobile {  display: none;  }
+
+footer #emailbox_container #warning {
+    text-align: center;
+    font-size: .8rem;
+}
 
 
 /*---------------------------------*/
@@ -360,6 +372,12 @@ footer #footer_ads_container button{
 
     main #third_sec img { margin-bottom: 0; }
 
+    main #summery_sec {
+        padding-bottom: 0rem;
+        border-left: 4px solid red;
+        padding-left: .5rem;
+    }
+
     footer {
         margin-top: 0;
         flex-direction: column;
@@ -373,10 +391,11 @@ footer #footer_ads_container button{
 
     footer #emailbox_container #discri { font-size: .9rem; }
 
-    footer #emailbox_container #email { 
-        width: 90%;
-        margin-left: 5%;
+    footer #emailbox_container #email,
+    footer #emailbox_container #forward  { 
         padding: .8rem .5rem;
+        width: 60%;
+        margin-left: 20%;
     }
 
     footer #emailbox_container #forward { margin-top: 0; }
@@ -392,7 +411,7 @@ footer #footer_ads_container button{
 
     footer #footer_ads_container h1 { font-size: 1.7rem; }
 
-    footer #footer_ads_container li { margin-left: 2rem; }
+    footer #footer_ads_container li { margin-left: 15%; }
 
     footer #footer_ads_container button {
         width: 50%;
@@ -445,7 +464,7 @@ footer #footer_ads_container button{
 
     .footer_ads_container-mobile #all_for .amount { color: red; }
 
-    .footer_ads_container-mobile button { 
+    .footer_ads_container-mobile a.affliate_link { 
         padding: .5rem 1rem;
         background-color: coral;
         border-radius: 5rem;
@@ -453,6 +472,27 @@ footer #footer_ads_container button{
         font-weight: bold;
         margin-left: 10%;
         width: 80%;
+        color: black;
+    }
+
+    .footer_ads_container-mobile a.affliate_link:hover,
+    .footer_ads_container-mobile a.affliate_link:focus{ text-decoration: none; }
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    footer #emailbox_container #email {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #secondary_container input, #forward {
+        width: 50%;
+        margin-left: 25%;
     }
 
 }
