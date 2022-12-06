@@ -187,7 +187,7 @@ main #summery_sec {
 
 .adbox { 
     width: 90%;
-    height: 46rem;
+    height: 48rem;
     background-color: #fdf4f4;
     margin-top: 80vh;
     margin-left: 5%;
@@ -209,7 +209,7 @@ footer #footer_ads_container p { margin-left: 1rem; }
 footer #footer_ads_container li {
     list-style: disclosure-closed;
     line-height: 2rem;
-    margin-left: 5rem;
+    margin-left: 3.5rem;
     font-size: .9rem;
     margin-top: 1rem;
 }
@@ -241,12 +241,12 @@ footer #footer_ads_container a{
     border-radius: 5rem;
     border: none;
     font-weight: bold;
-    width: 50%;
-    margin-left: 25%;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .adbox a:hover,
@@ -333,7 +333,7 @@ footer #emailbox_container #warning {
 
 
 /*---------------------------------*/
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 970px) {
 
     article#hero_container #hero_img_sec {  display: none; }
 
@@ -473,6 +473,8 @@ footer #emailbox_container #warning {
         margin-left: 10%;
         width: 80%;
         color: black;
+        display: flex;
+        justify-content: center;
     }
 
     .footer_ads_container-mobile a.affliate_link:hover,
@@ -493,6 +495,16 @@ footer #emailbox_container #warning {
     #secondary_container input, #forward {
         width: 50%;
         margin-left: 25%;
+    }
+
+    footer #footer_ads_container a {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .footer_ads_container-mobile a.affliate_link { 
+        width: 96%;
+        margin-left: 2%;
     }
 
 }
